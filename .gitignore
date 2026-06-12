@@ -1,0 +1,49 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Expo directories and files
+.expo/
+**/dist/
+**/web-build/
+**/expo-env.d.ts
+
+# Native builds
+**/ios/
+**/android/
+**/*.jks
+**/*.p8
+**/*.p12
+**/*.key
+**/*.mobileprovision
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.metro-health-check*
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.metro-health-check*
+
+# IDE/OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.claude/
+**/.DS_Store
+**/.vscode/
+**/.claude/
+
+# TypeScript
+*.tsbuildinfo
+**/*.tsbuildinfo
