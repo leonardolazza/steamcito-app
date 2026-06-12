@@ -6,8 +6,13 @@ import axios from "axios";
 // 2. Fallback a la API Key de test entregada
 const getApiKey = () => {
   try {
-    if (typeof process !== 'undefined' && process.env && process.env.EXPO_PUBLIC_OPENROUTER_API_KEY) {
-      return process.env.EXPO_PUBLIC_OPENROUTER_API_KEY;
+    if (typeof process !== 'undefined' && process.env) {
+      if (process.env.EXPO_PUBLIC_OPENROUTER_API_KEY) {
+        return process.env.EXPO_PUBLIC_OPENROUTER_API_KEY;
+      }
+      if (process.env.OPENROUTER_API_KEY) {
+        return process.env.OPENROUTER_API_KEY;
+      }
     }
   } catch (e) {
     console.warn("Error leyendo variables de entorno:", e.message);
