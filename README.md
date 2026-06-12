@@ -27,15 +27,15 @@ El chat inteligente de Steamcito no es solo texto. Analiza las respuestas del mo
 
 ```mermaid
 graph TD
-    U[Usuario consulta por un videojuego] -->|Envia mensaje| C(Pantalla de Chat)
-    C -->|Consulta API con System Prompt| OR[OpenRouter API: GPT-4o-Mini]
-    OR -->|Retorna texto formateado + tag [AppID: XXXXXX]| C
-    C -->|Regex busca etiqueta AppID| P{¿Tiene [AppID]?}
-    P -->|Sí| CS[Consultar CheapShark API con AppID]
-    P -->|No| D[Mostrar burbuja de chat clásica]
-    CS -->|Obtiene mejor precio actual| T[Generar Tarjeta de Oferta en Vivo]
-    T -->|Carga imagen de cabecera de Steam| UI[Mostrar Burbuja + Banner de Oferta Interactivo]
-    UI -->|Click en 'Ver en Steam'| S[Abrir Tienda oficial de Steam en Navegador]
+    U["Usuario consulta por un videojuego"] -->|Envia mensaje| C("Pantalla de Chat")
+    C -->|Consulta API con System Prompt| OR["OpenRouter API: GPT-4o-Mini"]
+    OR -->| "Retorna texto formateado + tag [AppID: XXXXXX]" | C
+    C -->| "Regex busca etiqueta [AppID]" | P{"¿Tiene [AppID]?"}
+    P -->|Sí| CS["Consultar CheapShark API con AppID"]
+    P -->|No| D["Mostrar burbuja de chat clásica"]
+    CS -->|Obtiene mejor precio actual| T["Generar Tarjeta de Oferta en Vivo"]
+    T -->|Carga imagen de cabecera de Steam| UI["Mostrar Burbuja + Banner de Oferta Interactivo"]
+    UI -->| "Click en 'Ver en Steam'" | S["Abrir Tienda oficial de Steam en Navegador"]
 ```
 
 ---
