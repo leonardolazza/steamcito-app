@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "chat_steam",
-    "slug": "chat_steam",
+    "slug": "chatsteam",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
